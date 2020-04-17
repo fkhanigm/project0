@@ -2,16 +2,26 @@
 
 <html>
     <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <style>
+            .center {
+              text-align: center ;
+            }
+            .right {
+              text-align: right ;
+            }
+            </style>
         <title>Django MyBlog</title>
     </head>
     <body>
         <div>
-            <h1><a href="https://google.com">Django MyBlog</a></h1>
+            <h1 class="center"><a href="https://google.com">Django MyBlog</a></h1>
         </div>
 
         <div>
             {% for post in posts %}
-                <div>
+                <div class="right">
                     <p>published: {{ post.published_date }}</p>
                     <h2><a href="">{{ post.title }}</a></h2>
                     <p>{{ post.text|linebreaksbr }}</p>
