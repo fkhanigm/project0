@@ -1,0 +1,16 @@
+
+h1 a, h2 a {
+    color: #C25100; 
+}
+
+.center {
+    text-align: center ;
+  }
+.right {
+    text-align: right ;
+    width: 80%;
+    background-color: lightgrey;
+    padding: 3%;
+    margin-left: 10%;
+    margin-top: 1%;
+  }
