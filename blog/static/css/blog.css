@@ -13,9 +13,17 @@
   .page-header {
     text-align: center ;
     width: 80%;
-    background-color: #C25100;
+    background-color: rgb(99, 99, 99);
     color: white;
     margin-top: 0;
     margin-left: 10%;
     padding: 3%;
   }
+  .post-form {
+    text-align: right ;
+    width: 80%;
+    padding: 3%;
+    margin-left: 10%;
+    margin-top: 1%;
+  }
+

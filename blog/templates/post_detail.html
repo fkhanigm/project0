@@ -3,13 +3,18 @@
 {% block content %}
     
     <div class="right">
+        <img style="padding:10px" src="{{ post.title_image.url }}" width="100%" >
         <h2 class="color"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
         {% if post.published_date %}
             <div>
                 <p>published: {{ post.published_date }}</p>
             </div>
         {% endif %}
+        {% if user.is_authenticated %} 
+            <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
         <p>{{ post.text|linebreaksbr }}</p>
+        <p>منبع: <a href="">{{ post.source_command }}</a></p>
     </div>
     
 {% endblock %}
