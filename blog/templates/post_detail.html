@@ -16,5 +16,22 @@
         <p>{{ post.text|linebreaksbr }}</p>
         <p>منبع: <a href="">{{ post.source_command }}</a></p>
     </div>
+    <hr>
+    <div style="text-align: right ;margin-right: 10%; padding: 3%;">
+        <a class="btn btn-default" href="{% url 'comment_new' pk=post.pk %}">ایجاد نظر</a>
+    </div>
+    <div class="comment">
+        {% for comment in post.comments.all %}
+            <div>
+                <div class="date">{{ comment.created_date }}</div>
+                <p>نویسنده: <strong>{{ comment.author }}</strong></p>
+                <p>{{ comment.text|linebreaks }}</p>
+                <hr>
+            </div>
+        {% empty %}
+            <p>No comments here yet :(</p>
+        {% endfor %}
+    </div>
+
     
 {% endblock %}

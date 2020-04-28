@@ -9,6 +9,7 @@
             <h2 class="color"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>published: {{ post.published_date }}</p>
             <p>{{ post.text|linebreaksbr|truncatewords:30 }}<a href="{% url 'post_detail' pk=post.pk %}">ادامه مطلب</a></p>
+            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
         </div>
     {% endfor %}
 {% endblock %}
